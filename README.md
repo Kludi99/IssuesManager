@@ -11,7 +11,7 @@ To test the application, you must specify the platform number:
 
 The platform number is defined as an **enum**.
 
-You need to also add required configuration in the `appsettings.json` file:
+You must also add the required configuration in the `appsettings.json` file:
 
    - For **GitHub**:
      - `Token`: Your GitHub API token
