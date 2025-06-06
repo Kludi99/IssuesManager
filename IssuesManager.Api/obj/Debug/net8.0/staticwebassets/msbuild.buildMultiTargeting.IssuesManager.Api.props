@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\IssuesManager.Api.props" />
+</Project>

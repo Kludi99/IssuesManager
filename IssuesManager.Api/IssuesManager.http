@@ -1,0 +1,6 @@
+@IssuesManager_HostAddress = http://localhost:5191
+
+GET {{IssuesManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
