@@ -18,4 +18,5 @@
 # Kompilowane pliki
 bin/
 out/
+obj/
 build/
