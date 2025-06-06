@@ -16,7 +16,7 @@ public class GitHubService : IIssueService
     {
         _options = options.Value;
         _httpClient = new HttpClient();
-        _httpClient.BaseAddress = new Uri("https://api.github.com/repos/");
+        _httpClient.BaseAddress = new Uri(_options.Url);
         _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _options.Token);
         _httpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("IssuesManager", "1.0"));
     }
