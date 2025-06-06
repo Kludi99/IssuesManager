@@ -9,11 +9,10 @@ public static class GitEndpoint
     public static void MapGitEndpoint(this RouteGroupBuilder api)
     {
         api.MapPost("/issues/create", CreateIssue);
-        
-        api.MapPatch("/issues/update", UpdateIssue);
-       
-       api.MapPatch("/issues/close", CloseIssue);
 
+        api.MapPatch("/issues/update", UpdateIssue);
+
+        api.MapPatch("/issues/close", CloseIssue);
     }
 
     private static async Task<IResult> CreateIssue([FromBody] CreateIssueRequest req,
@@ -53,7 +52,7 @@ public static class GitEndpoint
             return Results.Problem($"Internal error: {ex.Message}");
         }
     }
-    
+
     private static async Task<IResult> CloseIssue([FromBody] CloseIssueRequest req,
         [FromServices] IPlatformFactory factory)
     {

@@ -12,8 +12,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.Configure<GitHubOptions>(
     builder.Configuration.GetSection(GitHubOptions.PLATFORM_NAME));
+builder.Services.Configure<GitLabOptions>(
+    builder.Configuration.GetSection(GitLabOptions.PLATFORM_NAME));
 
 builder.Services.AddTransient<GitHubService>();
+builder.Services.AddTransient<GitLabService>();
 builder.Services.AddSingleton<IPlatformFactory, PlatformFactory>();
 
 var app = builder.Build();
@@ -31,4 +34,3 @@ app.UseHttpsRedirection();
 var api = app.MapGroup("/api/v1");
 api.MapGitEndpoint();
 app.Run();
-

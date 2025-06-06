@@ -1,7 +1,6 @@
 ﻿namespace IssuesManager.Core.Models;
 
-public class CloseIssueRequest:BaseIssueRequest
+public class CloseIssueRequest : BaseIssueRequest
 {
-     public int IssueNumber { get; set; }
-    
+    public int IssueNumber { get; set; }
 }
